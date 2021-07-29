@@ -17,7 +17,7 @@ for k, v in word_index.items():
     word_index["<START>"] = 1  # 起始标志
     word_index["<UNK>"] = 2  # 未知单词的标志
     word_index["<UNUSED>"] = 3
-reverse_word_index = {[value, key] for [key, value] in word_index.items()}
+reverse_word_index = {[[value, key] for [key, value] in word_index.items()]}
 
 
 def decode_review(text):
